@@ -1,1 +1,1 @@
-export const Header = () => (<div> Hello </div)
+export const Header = () => (<div className="header"> Hello </div>)
