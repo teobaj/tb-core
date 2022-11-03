@@ -1,8 +1,8 @@
 import { url$ } from "../../services/url.service";
-export default async function handler(req, res) {
+export default async function handler(req: any, res: any) {
     const {method , body} = req;
     if(method === "POST"){
-        let obj = JSON.parse(body);
+        let obj: any = JSON.parse(body);
         if(obj.url){
             url$ = obj.url
         }
