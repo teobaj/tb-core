@@ -1,1 +1,1 @@
-export const url$ = new BehaviorSubject("")
+export let url$ = ''

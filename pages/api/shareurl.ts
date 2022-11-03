@@ -4,8 +4,8 @@ export default async function handler(req, res) {
     if(method === "POST"){
         let obj = JSON.parse(body);
         if(obj.url){
-            url$.next(obj.url)
+            url$ = obj.url
         }
     }
-    res.status(200).json({url: url$.getValue()})
+    res.status(200).json({url: url$})
 }
