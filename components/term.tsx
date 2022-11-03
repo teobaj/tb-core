@@ -41,6 +41,12 @@ export const XTerminal = () => {
         term.writeln("There is no such config");
       }
     },
+    share: (url: string) =>{
+      fetch("/api/shareurl", {
+        method: 'POST',
+        body: JSON.stringify({url: url})
+      }).then((r) => r.json()).then((d) => console.log(d))
+    }
   };
 
   const keyHandle: { [key: string]: any } = {
